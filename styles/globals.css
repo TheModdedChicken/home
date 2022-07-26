@@ -29,3 +29,11 @@ a {
     background: black;
   }
 }
+
+.elementRemove {
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  width: 0;
+}

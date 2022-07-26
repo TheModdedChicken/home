@@ -108,10 +108,26 @@
   margin-left: 0.5rem;
 }
 
+.centerBar {
+  animation: centerBarAnim 5s 1;
+}
+
+.particalOpacity {
+  animation: particalOpacityAnim 5s 1;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .noMobile {
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    width: 0;
   }
 }
 
@@ -126,4 +142,17 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+@keyframes centerBarAnim {
+  0% { transform-origin: center; position: relative; left: 10vw; transform: rotate(90deg); }
+  15% { transform-origin: center; position: relative; left: 10vw; transform: rotate(90deg); }
+  35% { transform-origin: center; position: relative; left: 10vw; transform: rotate(0deg); }
+  45% { transform-origin: center; position: relative; left: 0vw; transform: rotate(0deg); }
+}
+
+@keyframes particalOpacityAnim {
+  0% { opacity: 0; }
+  45% { opacity: 0; }
+  90% { opacity: 1; }
 }
