@@ -69,7 +69,7 @@ const Home: NextPage = () => {
                 <div className='flex flex-row mt-5'>
                   <a href='https://github.com/TheModdedChicken'><FontAwesomeIcon icon={faGithub} width={30} height={30} className='mr-5'/></a>
                   <a href='https://twitter.com/TheModdedChickn'><FontAwesomeIcon icon={faTwitter} width={30} height={30} className='mr-5'/></a>
-                  <a href='https://www.youtube.com/channel/UCTFDYs_BMTxOEyAnlUeDJbQ'><FontAwesomeIcon icon={faYoutube} width={30} height={30} className='mr-5'/></a>
+                  <a href='https://www.youtube.com/@themoddedchicken'><FontAwesomeIcon icon={faYoutube} width={30} height={30} className='mr-5'/></a>
                   <a href='mailto://me@loganshaw.org'><FontAwesomeIcon icon={faEnvelope} width={30} height={30} className='mr-5'/></a>
                 </div>
               </div>
