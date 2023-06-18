@@ -6,8 +6,6 @@ import { faEnvelope, faMailBulk } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 import styles from '../styles/Home.module.css'
-import ProfilePicture from '../public/TheModdedChicken.png'
-import IRLPicture from '../public/LoganShaw-2020.jpg'
 import UnderConstruction from '../components/UnderConstruction'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
@@ -40,19 +38,9 @@ const Home: NextPage = () => {
           {Construction ? <UnderConstruction/>
           :(
             <div className={`flex flex-row items-center justify-center`}>
-              <div className={`elementRemove flex flex-col font-semibold text-xl items-end`}>
-                <button className='p-3 hover:underline'>About</button>
-                <button className='p-3 hover:underline'>Skills</button>
-                <button className='p-3 hover:underline'>Portfolio</button>
-              </div>
-              {/* ^^ ${styles.noMobile} ^^ */}
-
-              <div className={`${styles.noMobile} ${styles.centerBar} w-1 h-[30vh] rounded-full dark:bg-gray-800 bg-gray-300 mx-5`}></div>
-              {/* ^^ ${styles.noMobile} ${styles.centerBar} ^^ */}
-
               <div className='w-[35vw] max-w-[600px]'>
                 <div className='flex flex-row items-center my-5'>
-                  <Image src={IRLPicture} alt="TheModdedChicken" width={'70px'} height={'70px'} className='rounded-2xl'></Image>
+                  <Image src={'/LoganShaw_2022.jpg'} alt="TheModdedChicken" width={'70px'} height={'70px'} className='rounded-2xl'></Image>
                   <div>
                     <h1 className='ml-5 font-semibold text-2xl'>Logan Shaw</h1>
                     <h2 className='ml-5 font-semibold text-1xl text-gray-500'><span className='text-sm'>aka</span> TheModdedChicken</h2>
@@ -70,7 +58,7 @@ const Home: NextPage = () => {
                   <a href='https://github.com/TheModdedChicken'><FontAwesomeIcon icon={faGithub} width={30} height={30} className='mr-5'/></a>
                   <a href='https://twitter.com/TheModdedChickn'><FontAwesomeIcon icon={faTwitter} width={30} height={30} className='mr-5'/></a>
                   <a href='https://www.youtube.com/@themoddedchicken'><FontAwesomeIcon icon={faYoutube} width={30} height={30} className='mr-5'/></a>
-                  <a href='mailto://me@loganshaw.org'><FontAwesomeIcon icon={faEnvelope} width={30} height={30} className='mr-5'/></a>
+                  <a href='mailto://themoddedchickn@gmail.com'><FontAwesomeIcon icon={faEnvelope} width={30} height={30} className='mr-5'/></a>
                 </div>
               </div>
             </div>
