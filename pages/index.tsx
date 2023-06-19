@@ -38,9 +38,9 @@ const Home: NextPage = () => {
           {Construction ? <UnderConstruction/>
           :(
             <div className={`flex flex-row items-center justify-center`}>
-              <div className='w-[35vw] max-w-[600px]'>
+              <div className='max-w-[600px]'>
                 <div className='flex flex-row items-center my-5'>
-                  <Image src={'/LoganShaw_2022.jpg'} alt="TheModdedChicken" width={'70px'} height={'70px'} className='rounded-2xl'></Image>
+                  <Image src={'/LoganShaw_2022.jpg'} alt="Logan Shaw" width={'70px'} height={'70px'} className='rounded-2xl'></Image>
                   <div>
                     <h1 className='ml-5 font-semibold text-2xl'>Logan Shaw</h1>
                     <h2 className='ml-5 font-semibold text-1xl text-gray-500'><span className='text-sm'>aka</span> TheModdedChicken</h2>

@@ -144,13 +144,6 @@
   }
 }
 
-@keyframes centerBarAnim {
-  0% { transform-origin: center; position: absolute; left: 10vw; transform: rotate(90deg); }
-  15% { transform-origin: center; position: absolute; left: 10vw; transform: rotate(90deg); }
-  35% { transform-origin: center; position: absolute; right: 0px; transform: rotate(0deg); }
-  45% { transform-origin: center; position: absolute; right: 0vw; transform: rotate(0deg); }
-}
-
 @keyframes particalOpacityIncompleteAnim {
   0% { opacity: 0; }
   20% { opacity: 0; }
