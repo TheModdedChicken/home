@@ -1,0 +1,43 @@
+@font-face {
+  font-family: DM-Mono;
+  src: url(./assets/DM_Mono/DMMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: DM-Mono;
+  src: url(./assets/DM_Mono/DMMono-Italic.ttf);
+  font-style: italic;
+}
+
+body {
+  margin: 0 10px 0 10px;
+  font-family: DM-Mono;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  justify-content: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: #3178C6;
+  text-decoration: none;
+}
+
+h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.bold {
+  font-weight: 600;
+}

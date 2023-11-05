@@ -1,0 +1,28 @@
+.project_card {
+  text-align: left;
+  margin-bottom: 20px;
+
+  > p {
+    margin: 0;
+  }
+}
+
+.project_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h5 {
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  p {
+    font-weight: 600;
+    margin-right: 10px;
+  }
+}

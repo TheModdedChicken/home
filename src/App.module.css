@@ -1,0 +1,28 @@
+.App {
+  background-color: white;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  color: black;
+
+  max-width: 600px;
+}
+
+@media only screen and (max-width: 449px) {
+  .App {
+    font-size: calc(10px + 2vmin);
+  }
+}
+
+.header {
+  margin-top: 25px;
+}
+
+
+.aboutme_nameplate > * {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
