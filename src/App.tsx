@@ -1,12 +1,13 @@
 import { type Component } from 'solid-js';
 import { Routes, Route, NavLink, Navigate } from '@solidjs/router';
-
-import styles from './App.module.css';
-import About from './pages/About';
 import NavBar from './components/NavBar';
+
+import About from './pages/About';
 import Thoughts from './pages/Thoughts';
 import Projects from './pages/Projects';
 import Socials from './pages/Socials';
+
+import styles from './App.module.css';
 
 const App: Component = () => {
   return (
