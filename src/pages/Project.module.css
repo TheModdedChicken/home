@@ -1,3 +1,9 @@
 .project {
-  
+  min-width: 100%;
+}
+
+.project_actions {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
 }

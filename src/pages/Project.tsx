@@ -2,8 +2,9 @@ import { createResource, type Component, Switch, Match, } from 'solid-js';
 
 import styles from './Project.module.css';
 import { Octokit } from '@octokit/rest';
-import { useParams } from '@solidjs/router';
+import { A, useParams } from '@solidjs/router';
 import { SolidMarkdown } from 'solid-markdown';
+import Back from '../components/Back';
 
 const octokit = new Octokit();
 
@@ -17,7 +18,10 @@ const Project: Component = () => {
 
   return (
     <div class={styles.project}>
-      <a href={'https://github.com/' + repoFull} target='_blank'><h5>View on GitHub</h5></a>
+      <div class={styles.project_actions}>
+        <Back><h5>Back</h5></Back>
+        <A href={'https://github.com/' + repoFull} target='_blank'><h5>View on GitHub</h5></A>
+      </div>
       <Switch>
         <Match when={["pending", "refreshing"].includes(readme.state)}><p>Loading {repoFull} README file...</p></Match>
         <Match when={["errored", "unresolved"].includes(readme.state)}><p>{repoFull} has no README file.</p></Match>

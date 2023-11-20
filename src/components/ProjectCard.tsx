@@ -15,7 +15,7 @@ const ProjectCard: Component<ProjectCardProps> = (props) => {
   return (
     <div class={styles.project_card}>
       <div class={styles.project_info}>
-        <a href={'/projects/' + props.name}><h5>{props.name}</h5></a>
+        <a href={`/projects/${props.name}/`}><h5>{props.name}</h5></a>
         <p>[{props.language || "Unknown"}]</p>
       </div>
       <p>{props.description || "No description"}</p>

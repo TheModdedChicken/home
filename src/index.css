@@ -12,7 +12,6 @@
 body {
   margin: 0 10px 0 10px;
   font-family: DM-Mono;
-  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -31,8 +30,14 @@ a {
 }
 
 h5 {
+  font-size: 0.85em;
+
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+h6 {
+  font-size: 0.75em;
 }
 
 p {
@@ -44,6 +49,7 @@ p {
 }
 
 .markdown-body {
+  min-width: 100%;
   text-align: left;
   font-size: 16px;
 

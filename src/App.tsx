@@ -26,7 +26,7 @@ const App: Component = () => {
           { name: 'Socials', href: '/socials' }
         ]}/>
       </header>
-      <div>
+      <div style={{ "min-width": '100%' }}>
         <Routes>
 
         <Route path='/' element={<Navigate href='/about'></Navigate>} />
