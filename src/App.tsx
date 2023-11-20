@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import Socials from './pages/Socials';
 
 import styles from './App.module.css';
+import Project from './pages/Project';
 
 const App: Component = () => {
   return (
@@ -30,7 +31,10 @@ const App: Component = () => {
 
         <Route path='/' element={<Navigate href='/about'></Navigate>} />
         <Route path='/about' component={About} />
-        <Route path='/projects' component={Projects} />
+        <Route path='/projects'>
+          <Route path='/' component={Projects}/>
+          <Route path='/:repo' component={Project}/>
+        </Route>
         <Route path='/thoughts' component={Thoughts}/>
         <Route path='/socials' component={Socials}/>
 

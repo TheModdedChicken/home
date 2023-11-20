@@ -12,6 +12,7 @@
 body {
   margin: 0 10px 0 10px;
   font-family: DM-Mono;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -40,4 +41,21 @@ p {
 
 .bold {
   font-weight: 600;
+}
+
+.markdown-body {
+  text-align: left;
+  font-size: 16px;
+
+  :h1 {
+    font-size: 2em;
+  }
+
+  :h2 {
+    font-size: 1.5em;
+  }
+
+  :h3 {
+    font-size: 1.25em;
+  }
 }
