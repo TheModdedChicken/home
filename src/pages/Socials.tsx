@@ -15,6 +15,9 @@ const Socials: Component = () => {
       <div>
         <h5>Twitter</h5><a href='https://twitter.com/TheModdedChickn'><p>@themoddedchickn</p></a>
       </div>
+      <div>
+        <h5>BlueSky</h5><a href='https://bsky.app/profile/themoddedchicken.bsky.social'><p>@themoddedchicken.bsky.social</p></a>
+      </div>
     </div>
   );
 };
