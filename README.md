@@ -1,2 +1,2 @@
-# loganshaw.org
+# home
 My personal website :D
