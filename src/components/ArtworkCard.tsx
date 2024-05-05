@@ -2,6 +2,7 @@ import { For, Show, type Component } from 'solid-js';
 import date from 'date-and-time';
 
 import styles from './ArtworkCard.module.css';
+import Load from './Load';
 
 interface ArtworkCardProps {
   date: Date
@@ -47,7 +48,9 @@ const ArtworkCard: Component<ArtworkCardProps> = (props) => {
           </p>
         </Show>
       </div>
-      <img src={props.src} />
+      <Load text="[Show]">
+        <img src={props.src} />
+      </Load>
     </div>
   );
 };
