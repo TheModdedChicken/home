@@ -9,6 +9,7 @@ import Socials from './pages/Socials';
 
 import styles from './App.module.css';
 import Project from './pages/Project';
+import Artworks from './pages/Artworks';
 
 const App: Component = () => {
   return (
@@ -32,6 +33,7 @@ const App: Component = () => {
           </Route>
           <Route path='/thoughts' component={Thoughts} />
           <Route path='/socials' component={Socials} />
+          <Route path='/artworks' component={Artworks} />
 
           <Route path='/*' element={<h5>404 Not Found</h5>} />
 

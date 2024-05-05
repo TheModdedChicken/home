@@ -9,10 +9,17 @@
   color: black;
 
   max-width: 600px;
+  width: 600px;
 }
 
 .page {
   width: 100%;
+}
+
+@media only screen and (max-width: 599px) {
+  .App {
+    width: auto;
+  }
 }
 
 @media only screen and (max-width: 449px) {

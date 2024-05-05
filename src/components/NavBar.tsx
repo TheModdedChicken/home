@@ -28,7 +28,7 @@ const NavBar: Component<NavBarProps> = (props) => {
             return (
               <>
                 <A href={p.href} style={{
-                  'text-decoration': isCurrentPage ? 'underline' : 'none',
+                  'text-decoration': isCurrentPage ? 'underline' : undefined,
                   color: isCurrentPage ? '#144070' : undefined
                 }}>
                   <h6 style={{ margin: '0' }}>

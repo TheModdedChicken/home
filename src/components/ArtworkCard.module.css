@@ -1,0 +1,16 @@
+.artwork_card {
+  display: flex;
+  flex-direction: row;
+
+  align-items: start;
+  text-align: left;
+}
+
+.info {
+  width: 100%;
+  margin-right: 25px;
+}
+
+.artwork_card > img {
+  max-width: 30%;
+}

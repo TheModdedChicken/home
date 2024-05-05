@@ -2,6 +2,7 @@ import type { Component, JSXElement } from 'solid-js';
 
 import styles from './About.module.css';
 import Section, { Toggle } from '../components/Section';
+import { A } from '@solidjs/router';
 
 const About: Component = () => {
   return (
@@ -37,7 +38,7 @@ const About: Component = () => {
       <div class={styles.section}>
         <Section text={createHeaderToggle("Art")}>
           <p>
-            <a>my works {">"}</a>
+            <A href='/artworks'>my works {">"}</A>
             <br />
             <a>artists {">"}</a>
           </p>

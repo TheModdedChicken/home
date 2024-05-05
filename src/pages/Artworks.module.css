@@ -1,0 +1,7 @@
+.artworks {
+  margin: 40px 0;
+}
+
+.artworks > * {
+  margin: 20px 0;
+}
