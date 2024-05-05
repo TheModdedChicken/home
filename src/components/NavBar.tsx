@@ -16,22 +16,18 @@ interface NavBarProps {
 const NavBar: Component<NavBarProps> = (props) => {
   const location = useLocation();
 
-  const spacer = '-------------------------------';
-
   return (
     <div class={styles.navbar}>
-      <text>{spacer}</text>
-
       <div class={styles.navbar_pages}>
 
         {
           props.pages.map((p) => {
             const isCurrentPage = location.pathname === p.href;
-            const bracket = isCurrentPage ? ['>', '<'] : ['[', ']'];
+            const bracket = isCurrentPage ? ['>', '<'] : ['', ''];
 
             return (
               <>
-                <A href={p.href} style={{ 
+                <A href={p.href} style={{
                   'text-decoration': isCurrentPage ? 'underline' : 'none',
                   color: isCurrentPage ? '#144070' : undefined
                 }}>
@@ -41,11 +37,11 @@ const NavBar: Component<NavBarProps> = (props) => {
                 </A>
                 {
                   (
-                    props.pages.length <= 1 || 
+                    props.pages.length <= 1 ||
                     props.pages.findIndex(pf => pf.href === p.href && pf.name === p.name) !== (props.pages.length - 1)
                   )
-                  ? (<><br/><p style={{ margin: '0 10px' }}>|</p></>)
-                  : <></>
+                    ? (<><br /><p style={{ margin: '0 10px' }}><b>/</b></p></>)
+                    : <></>
                 }
               </>
             )
@@ -53,8 +49,6 @@ const NavBar: Component<NavBarProps> = (props) => {
         }
 
       </div>
-
-      <text>{spacer}</text>
     </div>
   );
 };

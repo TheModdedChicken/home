@@ -11,6 +11,10 @@
   max-width: 600px;
 }
 
+.page {
+  width: 100%;
+}
+
 @media only screen and (max-width: 449px) {
   .App {
     font-size: calc(10px + 2vmin);
@@ -18,7 +22,7 @@
 }
 
 .header {
-  margin-top: 25px;
+  margin: 20px 0;
 }
 
 

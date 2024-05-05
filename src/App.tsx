@@ -14,31 +14,26 @@ const App: Component = () => {
   return (
     <div class={styles.App}>
       <header class={styles.header}>
-        <div class={styles.aboutme_nameplate}>
-          <text><b>Logan Shaw</b></text> <br/>
-          <p style={{ color: '#7A7A7A' }}>aka TheModdedChicken</p>
-        </div>
-
-        <NavBar pages={[ 
-          { name: 'About', href: '/about' },    
-          { name: 'Projects', href: '/projects' },
+        <NavBar pages={[
+          { name: 'about', href: '/about' },
+          { name: 'projects', href: '/projects' },
           //{ name: 'Thoughts', href: '/thoughts' },
-          { name: 'Socials', href: '/socials' }
-        ]}/>
+          { name: 'socials', href: '/socials' }
+        ]} />
       </header>
-      <div style={{ "min-width": '100%' }}>
+      <div class={styles.page}>
         <Routes>
 
-        <Route path='/' element={<Navigate href='/about'></Navigate>} />
-        <Route path='/about' component={About} />
-        <Route path='/projects'>
-          <Route path='/' component={Projects}/>
-          <Route path='/:repo' component={Project}/>
-        </Route>
-        <Route path='/thoughts' component={Thoughts}/>
-        <Route path='/socials' component={Socials}/>
+          <Route path='/' element={<Navigate href='/about'></Navigate>} />
+          <Route path='/about' component={About} />
+          <Route path='/projects'>
+            <Route path='/' component={Projects} />
+            <Route path='/:repo' component={Project} />
+          </Route>
+          <Route path='/thoughts' component={Thoughts} />
+          <Route path='/socials' component={Socials} />
 
-        <Route path='/*' element={<h5>404 Not Found</h5>}/>
+          <Route path='/*' element={<h5>404 Not Found</h5>} />
 
         </Routes>
       </div>
