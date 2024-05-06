@@ -31,7 +31,7 @@
 }
 
 .footer {
-  position: sticky;
+  position: static;
   bottom: 0;
 
   display: flex;
@@ -43,7 +43,7 @@
 
   background-color: var(--background);
 
-  flex: 1;
+  flex-grow: 1;
 }
 
 
