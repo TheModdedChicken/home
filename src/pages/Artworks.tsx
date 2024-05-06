@@ -5,10 +5,13 @@ import styles from './Artworks.module.css';
 import sketch_unknown_instrument_2020 from '../assets/art/sketch-unknown_instrument-2020.jpg';
 import sketch_bagsnshit_May_4_2024 from '../assets/art/sketch-bagsnshit-May_4_2024.jpg';
 import sketch_ryo_May_5_2024 from '../assets/art/sketch-ryo-May_5_2024.jpg';
+import Title from '../components/Title';
 
 const Artworks: Component = () => {
   return (
     <div style={{ width: "100%" }}>
+      <Title>Artworks</Title>
+
       <p>A collection of my artworks</p>
 
       <div class={styles.artworks}>

@@ -1,4 +1,4 @@
-.project_card {
+.card {
   text-align: left;
   margin-bottom: 20px;
 
@@ -7,7 +7,7 @@
   }
 }
 
-.project_info {
+.info {
   display: flex;
   flex-direction: row;
   align-items: center;

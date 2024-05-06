@@ -3,6 +3,7 @@ import date from 'date-and-time';
 
 import styles from './ArtworkCard.module.css';
 import Load from './Load';
+import { A } from '@solidjs/router';
 
 interface ArtworkCardProps {
   date: Date
@@ -40,7 +41,7 @@ const ArtworkCard: Component<ArtworkCardProps> = (props) => {
               {(c, i) => {
                 return (
                   <>
-                    <br /><a href={c.link}>{c.name}</a>
+                    <br /><A href={c.link} target='_blank'>{c.name}</A>
                   </>
                 )
               }}

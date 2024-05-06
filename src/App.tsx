@@ -2,23 +2,23 @@ import { type Component } from 'solid-js';
 import { Routes, Route, NavLink, Navigate } from '@solidjs/router';
 import NavBar from './components/NavBar';
 
-import About from './pages/About';
-import Thoughts from './pages/Thoughts';
-import Projects from './pages/Projects';
-import Socials from './pages/Socials';
-
 import styles from './App.module.css';
-import Project from './pages/Project';
+
+import About from './pages/About';
+import Repos from './pages/Repos';
+import Socials from './pages/Socials';
 import Artworks from './pages/Artworks';
+import Things from './pages/Things';
+import { MetaProvider, Title } from '@solidjs/meta';
 
 const App: Component = () => {
   return (
     <div class={styles.App}>
+      <Title>Logan Shaw</Title>
       <header class={styles.header}>
         <NavBar pages={[
           { name: 'about', href: '/about' },
-          { name: 'projects', href: '/projects' },
-          //{ name: 'Thoughts', href: '/thoughts' },
+          { name: 'things', href: '/things' },
           { name: 'socials', href: '/socials' }
         ]} />
       </header>
@@ -27,14 +27,16 @@ const App: Component = () => {
 
           <Route path='/' element={<Navigate href='/about'></Navigate>} />
           <Route path='/about' component={About} />
-          <Route path='/projects'>
-            <Route path='/' component={Projects} />
-            <Route path='/:repo' component={Project} />
+          <Route path='/things'>
+            <Route path='/' component={Things} />
+            <Route path='/repos' component={Repos} />
+            <Route path='/artworks' component={Artworks} />
           </Route>
-          <Route path='/thoughts' component={Thoughts} />
-          <Route path='/socials' component={Socials} />
-          <Route path='/artworks' component={Artworks} />
 
+          <Route path='/repos' element={<Navigate href='/things/repos'></Navigate>} />
+          <Route path='/artworks' element={<Navigate href='/things/artworks'></Navigate>} />
+
+          <Route path='/socials' component={Socials} />
           <Route path='/*' element={<h5>404 Not Found</h5>} />
 
         </Routes>

@@ -1,15 +1,14 @@
 import { createResource, type Component, Switch, Match, For } from 'solid-js';
 
-import styles from './Projects.module.css';
-import { A } from '@solidjs/router';
 import { Octokit } from '@octokit/rest';
-import ProjectCard from '../components/ProjectCard';
+import RepoCard from '../components/RepoCard';
+import Title from '../components/Title';
 
 const octokit = new Octokit();
 
 const username = "themoddedchicken";
 
-async function getProjects () {
+async function getRepos() {
   const user = (await octokit.users.getByUsername({ username })).data;
 
   const res = await octokit.repos.listForUser({ username });
@@ -23,19 +22,21 @@ async function getProjects () {
     );
 }
 
-const Projects: Component = () => {
-  const [projects, { refetch }] = createResource(getProjects);
+const Repos: Component = () => {
+  const [repos, { refetch }] = createResource(getRepos);
 
   return (
-    <div class={styles.projects}>
+    <div>
+      <Title>Repos</Title>
+
       <Switch>
-        <Match when={["pending", "refreshing"].includes(projects.state)}><p>Loading projects...</p></Match>
-        <Match when={["errored", "unresolved"].includes(projects.state)}><h5>Failed to load projects :/</h5></Match>
-        <Match when={projects.state === "ready"}>
-          <For each={projects.latest}>
-            {(p) => 
-              <ProjectCard 
-                name={p.name} 
+        <Match when={["pending", "refreshing"].includes(repos.state)}><p>Loading repos...</p></Match>
+        <Match when={["errored", "unresolved"].includes(repos.state)}><h5>Failed to load repos :/</h5></Match>
+        <Match when={repos.state === "ready"}>
+          <For each={repos.latest}>
+            {(p) =>
+              <RepoCard
+                name={p.name}
                 description={p.description}
                 url={p.html_url}
                 updated={p.updated_at ? new Date(p.updated_at) : null}
@@ -49,4 +50,4 @@ const Projects: Component = () => {
   );
 };
 
-export default Projects;
+export default Repos;

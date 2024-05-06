@@ -4,6 +4,7 @@ import { Route, Router, Routes } from '@solidjs/router';
 
 import './index.css';
 import App from './App';
+import { MetaProvider } from '@solidjs/meta';
 
 const root = document.getElementById('root');
 
@@ -14,9 +15,11 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 }
 
 render(() => (
-  <Router>
-    <Routes>
-      <Route path='/*' element={<App />}/>
-    </Routes>
-  </Router>
+  <MetaProvider>
+    <Router>
+      <Routes>
+        <Route path='/*' element={<App />} />
+      </Routes>
+    </Router>
+  </MetaProvider>
 ), root!);

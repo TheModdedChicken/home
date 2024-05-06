@@ -4,7 +4,7 @@ import styles from './Project.module.css';
 import { Octokit } from '@octokit/rest';
 import { A, useParams } from '@solidjs/router';
 import { SolidMarkdown } from 'solid-markdown';
-import Back from '../components/Back';
+import Back from '../../components/Back';
 
 const octokit = new Octokit();
 
