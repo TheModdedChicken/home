@@ -15,9 +15,9 @@ type Themes = "light" | "dark"
 
 const App: Component = () => {
   createEffect(() => {
-    if (!getTheme()) setTheme(getComputedStyle(document.body, ":after").content as Themes);
-    updateTheme();
-  });
+    if (!getTheme()) setTheme(getComputedStyle(document.body, ":after").content.replaceAll("\"", "") as Themes);
+    else updateTheme();
+  }, []);
 
   return (
     <div class={styles.App}>
@@ -62,7 +62,8 @@ function getTheme() {
 }
 
 function setTheme(theme: Themes) {
-  return localStorage.setItem("theme", theme);
+  localStorage.setItem("theme", theme);
+  updateTheme();
 }
 
 function updateTheme() {
@@ -71,6 +72,7 @@ function updateTheme() {
   if (getTheme() === "dark") {
     r.setProperty("--background", "black")
     r.setProperty("--color", "white")
+
   } else {
     r.setProperty("--background", "white")
     r.setProperty("--color", "black")
@@ -80,6 +82,4 @@ function updateTheme() {
 function switchTheme() {
   if (getTheme() === "dark") setTheme("light");
   else setTheme("dark");
-
-  updateTheme();
 }

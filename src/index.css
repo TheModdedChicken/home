@@ -14,6 +14,8 @@ html {
 
   --background: white;
   --color: black;
+
+  scrollbar-color: gray var(--background);
 }
 
 body {
