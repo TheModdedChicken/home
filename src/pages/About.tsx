@@ -1,9 +1,8 @@
-import type { Component, JSXElement } from 'solid-js';
+import type { Component } from 'solid-js';
 
 import styles from './About.module.css';
 import Section, { Toggle } from '../components/Section';
 import { A } from '@solidjs/router';
-import { MAIN_TITLE } from '../const';
 import Title from '../components/Title';
 
 const About: Component = () => {
