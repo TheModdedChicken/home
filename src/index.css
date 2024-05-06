@@ -11,6 +11,9 @@
 
 html {
   overflow-y: scroll;
+
+  --background: white;
+  --color: black;
 }
 
 body {
@@ -21,6 +24,16 @@ body {
 
   display: flex;
   justify-content: center;
+
+  background-color: var(--background);
+  color: var(--color);
+}
+
+@media (prefers-color-scheme: dark) {
+  body::after {
+    content: "dark";
+    display: none;
+  }
 }
 
 code {

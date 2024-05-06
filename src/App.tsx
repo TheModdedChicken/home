@@ -1,5 +1,5 @@
-import { type Component } from 'solid-js';
-import { Routes, Route, NavLink, Navigate } from '@solidjs/router';
+import { createEffect, type Component } from 'solid-js';
+import { Routes, Route, NavLink, Navigate, A } from '@solidjs/router';
 import NavBar from './components/NavBar';
 
 import styles from './App.module.css';
@@ -11,7 +11,14 @@ import Artworks from './pages/Artworks';
 import Things from './pages/Things';
 import { MetaProvider, Title } from '@solidjs/meta';
 
+type Themes = "light" | "dark"
+
 const App: Component = () => {
+  createEffect(() => {
+    if (!getTheme()) setTheme(getComputedStyle(document.body, ":after").content as Themes);
+    updateTheme();
+  });
+
   return (
     <div class={styles.App}>
       <Title>Logan Shaw</Title>
@@ -41,8 +48,38 @@ const App: Component = () => {
 
         </Routes>
       </div>
+      <footer class={styles.footer}>
+        <a onClick={switchTheme}><p>switch theme</p></a>
+      </footer>
     </div>
   );
 };
 
 export default App;
+
+function getTheme() {
+  return localStorage.getItem("theme") as Themes | null;
+}
+
+function setTheme(theme: Themes) {
+  return localStorage.setItem("theme", theme);
+}
+
+function updateTheme() {
+  const r = document.documentElement.style;
+
+  if (getTheme() === "dark") {
+    r.setProperty("--background", "black")
+    r.setProperty("--color", "white")
+  } else {
+    r.setProperty("--background", "white")
+    r.setProperty("--color", "black")
+  }
+}
+
+function switchTheme() {
+  if (getTheme() === "dark") setTheme("light");
+  else setTheme("dark");
+
+  updateTheme();
+}
