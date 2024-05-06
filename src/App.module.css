@@ -43,7 +43,7 @@
 
   background-color: var(--background);
 
-  flex-grow: 1;
+  flex: 1;
 }
 
 
