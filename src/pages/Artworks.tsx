@@ -24,7 +24,7 @@ const Artworks: Component = () => {
           "
           tags={["practice"]}
           credits={[
-            { name: "reference > @moke_eclipse", link: "https://twitter.com/moke_eclipse/status/1778711455829016868" }
+            { name: "original > @moke_eclipse", link: "https://twitter.com/moke_eclipse/status/1778711455829016868" }
           ]}
         />
 
