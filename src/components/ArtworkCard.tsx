@@ -49,7 +49,7 @@ const ArtworkCard: Component<ArtworkCardProps> = (props) => {
           </p>
         </Show>
       </div>
-      <Load text="[Show]">
+      <Load text="[show]">
         <img src={props.src} />
       </Load>
     </div>

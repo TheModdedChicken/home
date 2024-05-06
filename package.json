@@ -21,8 +21,6 @@
     "@solidjs/meta": "^0.29.3",
     "@solidjs/router": "^0.8.3",
     "date-and-time": "^3.0.3",
-    "solid-js": "^1.7.6",
-    "solid-markdown": "^2.0.0",
-    "typewriter-effect": "^2.20.1"
+    "solid-js": "^1.7.6"
   }
 }

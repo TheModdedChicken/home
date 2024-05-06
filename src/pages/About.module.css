@@ -1,3 +1,7 @@
+.about > div:not(:last-child) {
+  margin-bottom: 50px;
+}
+
 .section {
   text-align: left;
 }
