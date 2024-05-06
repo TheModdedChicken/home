@@ -31,17 +31,19 @@
 }
 
 .footer {
-  position: fixed;
+  position: sticky;
   bottom: 0;
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 
   width: 100%;
   height: 40px;
 
   background-color: var(--background);
+
+  flex-grow: 1;
 }
 
 
