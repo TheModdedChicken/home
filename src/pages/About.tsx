@@ -42,7 +42,7 @@ const About: Component = () => {
           <p>
             <A href='/artworks'>my works {">"}</A>
             <br />
-            <a>artists {">"}</a>
+            {/* <A>artists {">"}</A> */}
           </p>
           <p>
             I've never taken art too seriously, but I have done drawings occasionally for school or personal entertainment.
