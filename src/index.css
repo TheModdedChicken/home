@@ -39,12 +39,20 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
 a {
-  color: #3178C6;
+  color: #3178c6;
   cursor: pointer;
   text-decoration: none;
 }
@@ -52,6 +60,18 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* a.external {
+  display: flex;
+
+  &:hover::after {
+    width: 0;
+    content: ">";
+    rotate: -45deg;
+    padding-left: 8px;
+    padding-top: 10px;
+  }
+} */
 
 h1 {
   font-size: 30px;

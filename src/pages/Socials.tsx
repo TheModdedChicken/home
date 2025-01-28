@@ -1,8 +1,8 @@
-import type { Component } from 'solid-js';
+import type { Component } from "solid-js";
 
-import styles from './Socials.module.css';
-import { A } from '@solidjs/router';
-import Title from '../components/Title';
+import styles from "./Socials.module.css";
+import { A } from "@solidjs/router";
+import Title from "../components/Title";
 
 const Socials: Component = () => {
   return (
@@ -11,16 +11,28 @@ const Socials: Component = () => {
 
       <div class={styles.socials}>
         <div>
-          <h5>GitHub</h5><a href='https://github.com/TheModdedChicken'><p>@themoddedchicken</p></a>
+          <h5>GitHub</h5>
+          <a
+            class="external"
+            href="https://github.com/TheModdedChicken"
+            target="_blank"
+          >
+            <p>@themoddedchicken</p>
+          </a>
         </div>
         <div>
-          <h5>Discord</h5><p>@themoddedchicken</p>
+          <h5>Discord</h5>
+          <p>@themoddedchicken</p>
         </div>
         <div>
-          <h5>Twitter</h5><a href='https://twitter.com/ModdedChicken'><p>@moddedchicken</p></a>
-        </div>
-        <div>
-          <h5>BlueSky</h5><a href='https://bsky.app/profile/themoddedchicken.bsky.social'><p>@themoddedchicken.bsky.social</p></a>
+          <h5>BlueSky</h5>
+          <a
+            class="external"
+            href="https://bsky.app/profile/chimken.dev"
+            target="_blank"
+          >
+            <p>@chimken.dev</p>
+          </a>
         </div>
       </div>
     </div>
