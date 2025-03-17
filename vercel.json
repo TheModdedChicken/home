@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "https://art.rayk.cc/(.*)",
+      "destination": "/things/artworks"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
