@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "https://art.rayk.cc/(.*)",
+      "source": "art.rayk.cc/(.*)",
       "destination": "/things/artworks"
     },
     {
